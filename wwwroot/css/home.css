@@ -1,0 +1,441 @@
+﻿body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes changewidth {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.background {
+   
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+/*    margin: 0 0 1rem;*/
+}
+
+.text-warning {
+    color: #ff9900;
+}
+
+#dynamicContent {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+ 
+}
+
+
+.para {
+    padding-top: 3%;
+    padding-right: 40%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.change-text {
+    text-align: justify;
+    padding-top: 15%;
+    /* Center the text */
+}
+
+/* Add styles for the image slider */
+.image-slider {
+    display:flex;
+    position:relative;
+   
+
+}
+
+.wrapper {
+    width: 400px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    position: absolute;
+     /* Adjust the top position as needed */
+    transform: translateY(-50%);
+    right: 0; /* Align to the right side */
+}
+
+    .wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #ededed;
+        background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) #ededed;
+        background-size: 200% 100%;
+        background-position-x: 180%;
+        animation: 1s loading ease-in-out infinite;
+    }
+
+/* Add any other necessary styles for your layout */
+
+@keyframes loading {
+    to {
+        background-position-x: -20%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* Apply styles for screens with a maximum width of 768 pixels (tablet and mobile) */
+    .change-text {
+        text-align: left;
+        padding-top: 25%; /* Align text to the left for smaller screens */
+    }
+
+    .buttons {
+        padding-top: 5%;
+        text-align: center; /* Center the button */
+    }
+
+    
+    .btn-4 {
+        display: inline-block; /* Ensure the button is a block element for proper alignment */
+    }
+
+    .para {
+        text-align: justify;
+        padding-top: 5%;
+        padding-right: 6%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .image-slider {
+        display: none; /* Hide the image slider */
+    }
+
+    .about {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 15px;
+        text-align: justify;
+    }
+
+    .head-about {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .wrapper {
+        width: 80%; /* Adjust the width as needed */
+        max-width: 400px; /* Set a maximum width if necessary */
+        height: 350px; /* Adjust the height as needed */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        border-radius: 15px;
+        margin-top: 10px; /* Add some space between the para and the image */
+    }
+
+        .wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #ededed;
+            background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) #ededed;
+            background-size: 200% 100%;
+            background-position-x: 180%;
+            animation: 1s loading ease-in-out infinite;
+        }
+}
+
+
+
+
+/*button*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+/*.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+}*/
+
+
+.btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
+    width: 155px;
+    height: 50px;
+    padding: 17px;
+    border: none;
+    border-radius: 30px;
+    margin: 0 10px 40px;
+    color: white;
+    font-weight:bold;
+    background-color: #F5B131;
+    flex: 0 0 auto;
+}
+
+btn-4 {
+    background: #F5B131;
+    transition: all 0.16s ease-in;
+}
+
+.btn-4:hover {
+    background: none;
+    color: #464646;
+    box-shadow: 0 0 0 1px rgba(80, 80, 80, .5);
+}
+
+/*card*/
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;300;700&display=swap');
+
+.sec-card {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.containerr {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 3rem 3.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 500px;
+}
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 101%;
+        height: 110%;
+        background-image: linear-gradient(to right bottom, #FFD733, #F63E07 );
+        z-index: -1;
+        border-radius: 15px;
+        transform: rotate(-5deg);
+        box-shadow: 0 0 45px 5px rgba(0, 0, 0, .2);
+    }
+
+    .card li {
+        width: 50%;
+        margin: 15px 0;
+    }
+
+        .card li p {
+            display: flex;
+        }
+
+        .card li h3 {
+            display: inline-block;
+            font-size: 2rem;
+            color: #333;
+            vertical-align: top;
+            margin-right: 5px;
+            line-height: 1.2;
+        }
+
+        .card li .fa {
+            font-size: .75rem;
+        }
+
+        .card li span {
+            color: #9ea6a8;
+            font-weight: bold;
+            font-size: .95rem;
+        }
+
+
+.clr-up {
+    color: green;
+}
+
+.clr-down {
+    color: red;
+}
+
+@media screen and (max-width: 1050px) {
+    .card::before {
+        top: -10px;
+        left: -2px;
+    }
+
+    .card li {
+        width: 100%;
+    }
+
+        .card li:not(:first-of-type) {
+            margin-top: 15px;
+        }
+    .containerr {
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+   
+}
+@media screen and (max-width: 700px) {
+    .card::before {
+        top: -10px;
+        left: -2px;
+    }
+
+    .card li {
+        width: 100%;
+    }
+
+    .about {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 15px;
+        text-align: justify;
+    }
+
+    .head-about {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+        .card li:not(:first-of-type) {
+            margin-top: 15px;
+        }
+
+    .containerr {
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+}
+.record {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+/*card-about*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+h1 {
+    text-align: center;
+   
+}
+
+.wrapperr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardd {
+    max-width: 300px;
+    min-height: 100px;
+    background: #F8C471;
+    padding: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #FFF;
+    margin: 20px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+
+    .cardd:nth-child(2) {
+        background: #F8C471;
+    }
+
+    .cardd:last-child {
+        background: #F8C471;
+    }
+
+.card-titlee {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.card-contentt {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.card-btn {
+    all: unset;
+    display: block;
+    margin-left: auto;
+    border: 2px solid #FFF;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+
+    .card-btn:hover {
+        color: #02b875;
+        background: #FFF;
+    }
+
+.cardd:nth-child(2) .card-btn:hover {
+    color: #4181ee;
+    background: #FFF;
+}
+
+.cardd:last-child .card-btn:hover {
+    color: #673ab7;
+    background: #FFF;
+}
+
+.about {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin:5px;
+    text-align:justify;
+}
+
+.head-about {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

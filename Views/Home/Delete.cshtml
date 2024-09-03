@@ -1,0 +1,83 @@
+﻿@model ContactModel
+
+
+
+@{
+    ViewData["Title"] = "Detele Contact";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+
+    <!-- Import external CSS file -->
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+    <!-- Other head elements go here -->
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <section class="text-gray-600 body-font bg-yellow-200">
+        <div class="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section"
+             id="contact-form">
+          
+            <div class="md:w-2/3 w-full mt-10 md:mt-0 md:pl-28">
+                <h1 class="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4"> Delete Contact Details?</h1>
+                <form method="post" asp-action="DeleteContact">
+                    <input asp-for="Id" hidden />
+                    <div class="p-2 w-full">
+                        <div asp-validation-summary="ModelOnly" class="text-red-500">
+                        </div>
+
+                        <br />
+                        <div class="relative">
+
+                            <label asp-for="Email" class="leading-7 py-4 text-lg text-gray-900"></label>
+                            <input asp-for="Email" readonly class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <span asp-validation-for="Email" class="text-red-500"></span>
+
+                        </div>
+
+                        <br />
+                        <div class="p-2 w-full">
+                            <div class="relative">
+                                <label asp-for="Name" class="leading-7 py-4 text-lg text-gray-900"></label>
+                                <input asp-for="Name" readonly type="text" class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out " />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="p-2 w-full">
+                            <div class="relative">
+                                <label asp-for="PhoneNumber" class="leading-7 py-4 text-lg text-gray-900"></label>
+                                <input asp-for="PhoneNumber" readonly class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out " />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="p-2 w-full">
+                            <div class="relative">
+                                <label asp-for="Message" class="leading-7 py-4 text-lg text-gray-900"></label>
+                                <textarea asp-for="Message" readonly class="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out "></textarea>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="p-2 w-full" role="group">
+                            <input type="submit" class="flex text-white bg-gray-900 border-0 py-4 px-6 focus:outline-none hover:bg-blue-900 rounded text-xl font-bold shadow-lg mx-0 flex-col text-center g-recaptcha" value="Delete" />
+
+                        </div>
+                        <a asp-action="Admin" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to list</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+</body>
+</html>

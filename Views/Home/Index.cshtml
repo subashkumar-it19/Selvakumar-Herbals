@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!-- Import external CSS file -->
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+    <!-- Other head elements go here -->
+</head>
+<body>
+    <section class="backgroud">
+        <div class="change-text">
+            <div><h2>Selvakumar Herbals is</h2></div>
+            <div id="dynamicContent" class="overflow-hidden"><h2>Trusted</h2></div>
+            <div class="text-warning"><h2>Gloriosa Supply Company:</h2></div>
+            <div class="image-slider">
+                <div class="wrapper">
+                    <img src="" alt="" id="image-animate">
+                </div>
+            </div>
+            <div class="para">
+                <p>Our company is dedicated to providing you with the highest quality Gloriosa Superba seeds and cultivating a thriving relationship with our valued customers. We offer expert guidance on planting, care, and utilization, ensuring that you reap the full benefits of this extraordinary plant.</p>
+            </div>
+
+            <div class="para">
+                <div class="buttons">
+                    <a asp-action="Contact" style="text-decoration:none;" class="btn btn-4">Contact Us</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class="sec-card">
+        <div class=" record"><h1>Our Records</h1></div>
+        
+        <div class="containerr">
+
+            <ul class="card">
+                <li>
+                    <p>
+                        <h3>2010</h3><i class="clr-up"></i>
+                    </p>
+                    <span> Stared Year</span>
+                </li>
+                <li>
+                    <p>
+                        <h3>900+</h3><i class="clr-down"></i>
+                    </p>
+                    <span>Tons Gloriosa Seed Processed</span>
+                </li>
+                <li>
+                    <p>
+                        <h3>230+</h3><i class=""></i>
+                    </p>
+                    <span>Happy Farmers</span>
+                </li>
+                <li>
+                    <p>
+                        <h3>100%</h3><i class=""></i>
+                    </p>
+                    <span>Trusted by Customers</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>What We Do?</h1>
+        <div class="wrapperr">
+
+            <div class="cardd">
+                <h3 style="color:black;" class="card-titlee">To Pharma Companies:</h3><br />
+                <p class="card-contentt">We have high quality of gloriosa seeds. One stop solution for pharma companies.</p>
+            </div>
+            <div class="cardd">
+                <h3 style="color:black;" class="card-titlee">To Farmers:</h3><br />
+                <p class="card-contentt">We directly purchase Gloriosa seeds at the current market price from farmers and customers.</p>
+            </div>
+            <div class="cardd">
+                <h3 style="color:black;" class="card-titlee">To New One:</h3><br />
+                <p class="card-contentt">We have more than 12 years of experience in cultivating Gloriosa seeds, experiencing various climatic changes. We provide consulting services with proper research for the plants. </p>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <script src="~/js/home.js" asp-append-version="true"></script>
+    <script>
+    let imageAnim = document.getElementById("image-animate");
+
+    let imageArray = [
+        "@Url.Content("~/images/gloriosa1.jpeg")",
+        "@Url.Content("~/images/gloriosa6.jpeg")",
+        "@Url.Content("~/images/gloriosa5.jpeg")",
+       "@Url.Content("~/images/seeds-1.jpeg")"
+    ];
+
+    let imageIndex = 0;
+
+    const startImage = () => {
+        imageAnim.setAttribute("src", imageArray[imageIndex]);
+        imageIndex++;
+        if (imageIndex >= imageArray.length) {
+            imageIndex = 0;
+        }
+    }
+
+    setInterval(startImage, 1000);
+    </script>
+
+</body>
+</html>

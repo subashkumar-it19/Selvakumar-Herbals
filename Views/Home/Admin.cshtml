@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ContactModel>
+@{
+    ViewData["Title"] = "Admin Page";
+}
+<br />
+<br />
+<br />
+<br />
+<div class="">
+    @if (Context.User.Identity.IsAuthenticated)
+    {
+        <br />
+        <h2>Welcome @User.Identity.Name</h2>
+        <br />
+        <a asp-action="Logout">Logout</a>
+    }
+</div>
+<br />
+<div>
+    <div class="">
+        <div class="">
+            <h2 class=""> Contact Details</h2>
+        </div>
+        @*<div class="">
+                <a asp-controller="" asp-action="Contactus" class="">Contact Us</a>
+
+            </div>*@
+    </div>
+
+    <br />
+    @if (Model != null && Model.Count() > 0)
+    {
+
+
+        <table width="100%">
+
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td width="20%">@item.Email</td>
+                        <td width="20%">@item.Name</td>
+                        <td width="20%">@item.PhoneNumber</td>
+                        <td width="30%">@item.Message</td>
+                        <td width="30%">
+                            <div class="" role="group">
+                                <a asp-controller="Home" asp-action="Edit" asp-route-Id="@item.Id" class="">Edit</a>
+                                <a asp-controller="Home" asp-action="Delete" asp-route-Id="@item.Id" class="">Delete</a>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <br />
+        <p><b>No Records</b></p>
+    }
+
+</div>
